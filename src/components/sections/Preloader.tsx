@@ -52,12 +52,12 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="w-24 h-24 mb-6 relative"
+            className="w-28 h-28 mb-4 relative"
           >
             <img
               src="/logo/logo.png"
               alt="A1 Construction"
-              className="w-full h-full object-contain filter brightness-110 drop-shadow-[0_0_15px_rgba(197,164,109,0.3)]"
+              className="w-full h-full object-contain filter brightness-110 drop-shadow-[0_0_20px_rgba(197,164,109,0.35)]"
             />
           </motion.div>
 

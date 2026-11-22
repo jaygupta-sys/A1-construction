@@ -23,11 +23,11 @@ export const Footer: React.FC = () => {
           {/* Brand & Tagline (5 cols) */}
           <div className="lg:col-span-5 flex flex-col">
             <div className="flex items-center gap-3.5 mb-6">
-              <div className="w-12 h-12 relative overflow-hidden flex items-center justify-center">
+              <div className="w-16 h-16 md:w-20 md:h-20 relative overflow-hidden flex items-center justify-center">
                 <img
                   src="/logo/logo.png"
                   alt="A1 Construction"
-                  className="w-full h-full object-contain filter brightness-110 drop-shadow-[0_0_10px_rgba(197,164,109,0.3)]"
+                  className="w-full h-full object-contain filter brightness-110 drop-shadow-[0_0_12px_rgba(197,164,109,0.35)]"
                 />
               </div>
               <div>

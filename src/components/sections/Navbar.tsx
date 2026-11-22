@@ -47,11 +47,11 @@ export const Navbar: React.FC = () => {
             onClick={(e) => handleLinkClick(e, "#hero")}
             className="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-gold-500 rounded-sm"
           >
-            <div className="w-10 h-10 md:w-11 md:h-11 relative overflow-hidden flex items-center justify-center">
+            <div className="w-11 h-11 md:w-12 md:h-12 relative overflow-hidden flex items-center justify-center">
               <img
                 src="/logo/logo.png"
                 alt="A1 Construction"
-                className="w-full h-full object-contain filter brightness-110 drop-shadow-[0_0_8px_rgba(197,164,109,0.25)] transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-contain filter brightness-110 drop-shadow-[0_0_10px_rgba(197,164,109,0.35)] transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="flex flex-col">
