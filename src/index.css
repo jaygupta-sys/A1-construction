@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-950: #071827;
+  --navy-900: #0B2236;
+  --navy-800: #102C43;
+  --ivory-100: #F5F2EA;
+  --gold-500: #C5A46D;
+  --orange-construction: #E97832;
+
+  --background: 213 69% 9%;
+  --foreground: 43 33% 94%;
+  --border: 215 35% 20%;
+  --input: 215 35% 20%;
+  --ring: 37 45% 60%;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #C5A46D;
+  color: #071827;
+}
+
+/* Base Body */
+body {
+  background-color: #071827;
+  color: #F5F2EA;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Editorial Serif Headings */
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Fluid Heading Helpers */
+.headline-hero {
+  font-size: clamp(2.2rem, 4.6vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.headline-section {
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.headline-huge {
+  font-size: clamp(3.2rem, 9vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+/* Gold Hairline Divider */
+.hairline-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(197, 164, 109, 0.4) 30%, rgba(197, 164, 109, 0.4) 70%, transparent 100%);
+}
+
+.hairline-gold-solid {
+  border-top: 1px solid rgba(197, 164, 109, 0.25);
+}
+
+/* Static Film Grain Overlay */
+.film-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Mask Reveal Utilities */
+.mask-overflow {
+  overflow: hidden;
+  display: block;
+}
+
+.mask-inner {
+  display: block;
+  transform: translateY(0);
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
